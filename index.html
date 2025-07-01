@@ -369,6 +369,63 @@
             margin-bottom: 0.5rem;
         }
         
+        /* Contact Form Styles */
+        .contact-form {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 0;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #1a1a2e;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-family: 'Source Serif Pro', serif;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #4a7c7e;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .form-submit {
+            background-color: #4a7c7e;
+            color: white;
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-family: 'Source Serif Pro', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .form-submit:hover {
+            background-color: #3a6264;
+        }
+        
         /* Footer */
         footer {
             background-color: #1a1a2e;
@@ -586,8 +643,25 @@
                 <li>Internship opportunities at top hedge funds</li>
             </ul>
             <p>The program is delivered entirely online, making it accessible to talented individuals worldwide.</p>
-            <p>For inquiries and applications, contact us at: <a href="mailto:global@fimaapply.com" style="color: #4a7c7e;">global@fimaapply.com</a></p>
-            <a href="mailto:global@fimaapply.com?subject=FIMA%20Application%20Inquiry" class="btn">Apply Now</a>
+            <p>To apply, contact us at <a href="mailto:global@fimaapply.com" style="color: #4a7c7e;">global@fimaapply.com</a>. For inquiries, contact us at <a href="mailto:info@fimaapply.com" style="color: #4a7c7e;">info@fimaapply.com</a> or use the below form:</p>
+            
+            <form class="contact-form" action="https://formspree.io/f/xpwrbevz" method="POST">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" placeholder="Tell us about yourself and your interest in FIMA..." required></textarea>
+                </div>
+                <button type="submit" class="form-submit">Send Message</button>
+            </form>
+            
+            <a href="mailto:global@fimaapply.com?subject=FIMA%20Application%20Inquiry" class="btn" style="margin-top: 2rem; display: inline-block;">Apply Now</a>
         </div>
     </section>
 
@@ -595,7 +669,7 @@
     <footer>
         <p>&copy; 2025 FIMA - Future Investment Manager Academy</p>
         <p>Internal Training Program of PD Cap LLC</p>
-        <p>Email: <a href="mailto:global@fimaapply.com" style="color: #4a7c7e;">global@fimaapply.com</a></p>
+        <p>Email: <a href="mailto:info@fimaapply.com" style="color: #4a7c7e;">info@fimaapply.com</a></p>
     </footer>
 
     <script>
